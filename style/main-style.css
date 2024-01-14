@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    background-color: rgb(219, 219, 219);
+}
+
+.button {
+    inline-size: 100%;
+    font: inherit;
+    color: currentColor;
+    background-color: rgb(34, 34, 34);
+    border: none;
+    cursor: pointer;
+    font-size: 40px;
+    color: white; 
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+  
+.button:hover,
+.button:focus-visible {
+    background-color: rgb(114, 114, 114);
+}
+  
+.menu {
+    position: relative;
+    display: grid;
+    margin-block-start: 0.5%;
+    background-color: rgb(34, 34, 34);
+    overflow: hidden;
+    line-height: 0;
+    color: transparent;
+    transition: line-height 0.8s, color 0.5s;
+}
+  
+.menu-item {
+    overflow: hidden;
+}
+  
+.menu-link {
+    display: block;
+    padding-top: 0.8lh;
+    padding-bottom: 0.8lh;
+    list-style-type: none;
+    font-size: 40px;
+    background-color: rgb(34, 34, 34);
+    text-decoration: none;
+    color: white;
+}
+  
+.menu-link:hover,
+.menu-link:focus-visible {
+    background-color: rgb(114, 114, 114);
+}
+  
+.button.active ~ .menu {
+    line-height: 1.2;
+    color: currentColor;
+}
+  
+  
+li {
+    list-style-type: none;
+    font-size: 40px;
+    background-color: rgb(34, 34, 34);
+}
+  
+a {
+    text-decoration: none;
+    color: white; 
+}
+  
+.nav-menu {
+    text-align: center;
+}
+  
+.submenu {
+    display: none;
+    transition: display 0.5s ease; 
+}
+  
+#menu:hover, .submenu:hover {
+    background-color: rgb(114, 114, 114); 
+}
+  
+.submenu-open {
+    display: block !important;
+}
+
+  
