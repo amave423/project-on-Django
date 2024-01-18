@@ -7,28 +7,34 @@
     </head>
     <body>
         <div class="container">
-            <button class="button" aria-expanded="false" aria-controls="list">Меню</button>
-            <ul class="menu" id="list" aria-hidden="true">
-              <li class="menu-item">
-                <a href="index.html" class="menu-link">Главная страница</a>
-              </li>
-              <li class="menu-item">
-                <a href="relevance.html" class="menu-link" >Восстребованность</a>
-              </li>
-              <li class="menu-item">
-                <a href="geography.html" class="menu-link" >География</a>
-              </li>
-              <li class="menu-item">
-                <a href="skills.html" class="menu-link" >Навыки</a>
-              </li>
-              <li class="menu-item">
-                <a href="latest-vac.html" class="menu-link" >Последние вакансии</a>
-              </li>
-            </ul>
+            <div class="sidebar" id="sidebar">
+              <button class="button" aria-expanded="false" aria-controls="list" onclick="toggleSidebar()">
+                <img src="image/menu.png" alt="Меню" width="50" height="30" class="rotate-icon">
+              </button>
+                <ul class="menu" id="list" aria-hidden="true">
+                    <li class="menu-item">
+                        <a href="index.html" class="menu-link">Главная страница</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="relevance.html" class="menu-link" >Восстребованность</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="geography.html" class="menu-link" >География</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="skills.html" class="menu-link" >Навыки</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="latest-vac.html" class="menu-link" >Последние вакансии</a>
+                    </li>
+                </ul>
+            </div>
+            <main>
+              <div class="main-content">
+                <h1 class="main-title">Системный администратор</h1>
+              </div>
+            </main>
         </div>
-        <main>
-
-        </main>
     </body>
     <footer>
 

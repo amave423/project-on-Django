@@ -1,89 +1,114 @@
-body {
+.main-content {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body, html {
     margin: 0;
-    background-color: rgb(219, 219, 219);
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
 }
 
 .button {
-    inline-size: 100%;
-    font: inherit;
-    color: currentColor;
-    background-color: rgb(34, 34, 34);
+    background: none;
     border: none;
     cursor: pointer;
-    font-size: 40px;
-    color: white; 
-    padding-top: 1%;
-    padding-bottom: 1%;
-}
-  
-.button:hover,
-.button:focus-visible {
-    background-color: rgb(114, 114, 114);
-}
-  
-.menu {
-    position: relative;
-    display: grid;
-    margin-block-start: 0.5%;
-    background-color: rgb(34, 34, 34);
-    overflow: hidden;
-    line-height: 0;
-    color: transparent;
-    transition: line-height 0.8s, color 0.5s;
-}
-  
-.menu-item {
-    overflow: hidden;
-}
-  
-.menu-link {
-    display: block;
-    padding-top: 0.8lh;
-    padding-bottom: 0.8lh;
-    list-style-type: none;
-    font-size: 40px;
-    background-color: rgb(34, 34, 34);
-    text-decoration: none;
-    color: white;
-}
-  
-.menu-link:hover,
-.menu-link:focus-visible {
-    background-color: rgb(114, 114, 114);
-}
-  
-.button.active ~ .menu {
-    line-height: 1.2;
-    color: currentColor;
-}
-  
-  
-li {
-    list-style-type: none;
-    font-size: 40px;
-    background-color: rgb(34, 34, 34);
-}
-  
-a {
-    text-decoration: none;
-    color: white; 
-}
-  
-.nav-menu {
-    text-align: center;
-}
-  
-.submenu {
-    display: none;
-    transition: display 0.5s ease; 
-}
-  
-#menu:hover, .submenu:hover {
-    background-color: rgb(114, 114, 114); 
-}
-  
-.submenu-open {
-    display: block !important;
+    padding: 10px;
+    display: flex;
+    align-items: center;
 }
 
-  
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    padding: 10px;
+    margin-top: 10%;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.menu-item:hover {
+    background-color: gray;
+}
+
+.menu-link {
+    display: block;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+    font-size: 26px;
+    padding: 10px;
+    white-space: nowrap;
+    transition: background-color 0.9s; 
+}
+
+.menu-link:hover {
+    background-color: gray;
+}
+
+.sidebar {
+    background-color: black;
+    width: 4%; 
+    overflow-x: hidden;
+    transition: width 0.3s; 
+}
+
+.sidebar .menu-item {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.sidebar-expanded {
+    width: 18%; 
+}
+
+.sidebar-expanded .menu-item {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.rotate-icon {
+    transition: transform 0.3s; 
+}
+
+.sidebar-expanded .rotate-icon {
+    transform: rotate(180deg); 
+}
+
+@media only screen and (max-width: 768px) {
+    .sidebar {
+        width: 100%; 
+        overflow-x: hidden;
+    }
+
+    .menu-item {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .sidebar-expanded .rotate-icon {
+        transform: rotate(0deg); 
+    }
+
+    .rotate-icon {
+        width: 50px; 
+        height: 30px;
+    }
+}
+
+.main-title {
+    font-size: 50px;
+    margin-left: 20%;
+    white-space: nowrap;
+}
