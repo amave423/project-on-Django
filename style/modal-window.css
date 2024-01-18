@@ -31,6 +31,18 @@ main {
 .popup-link {
     cursor: pointer;
     color: rgb(91, 164, 26);
+    -webkit-animation: blink5 2s linear infinite;
+    animation: blink5 2s linear infinite;
+}
+@-webkit-keyframes blink5 {
+  0% { color: rgb(51, 255, 0); }
+  50% { color: rgb(9, 175, 0); }
+  100% { color: rgb(51, 255, 0); }
+}
+@keyframes blink5 {
+  0% { color: rgb(51, 255, 0); }
+  50% { color: rgb(9, 175, 0); }
+  100% { color: rgb(51, 255, 0); }
 }
 
 .popup-link:hover {
