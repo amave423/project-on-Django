@@ -2,6 +2,10 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
+main {
+    margin-left: 10%;
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -11,6 +15,7 @@ body, html {
 .container {
     display: flex;
     height: 100vh;
+    overflow: hidden; 
 }
 
 .button {
@@ -50,6 +55,7 @@ body, html {
     padding: 10px;
     white-space: nowrap;
     transition: background-color 0.9s; 
+    cursor: default;
 }
 
 .menu-link:hover {
@@ -61,6 +67,7 @@ body, html {
     width: 4%; 
     overflow-x: hidden;
     transition: width 0.3s; 
+    flex-shrink: 0; /* Добавляем flex-shrink: 0; чтобы боковое меню не уменьшалось при уменьшении контента */
 }
 
 .sidebar .menu-item {
@@ -108,7 +115,25 @@ body, html {
 }
 
 .main-title {
-    font-size: 50px;
-    margin-left: 20%;
+    font-size: 60px;
     white-space: nowrap;
+}
+
+.main-content {
+    position: relative;
+}
+
+.main-title::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 80%;
+    height: 5px; 
+    background-color: #ccc; 
+    border-radius: 100px;
+}
+
+.mc {
+   max-width: 80%; 
+   font-size: 18px;
 }

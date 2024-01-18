@@ -7,28 +7,32 @@
     </head>
     <body>
         <div class="container">
-            <button class="button" aria-expanded="false" aria-controls="list">Меню</button>
-            <ul class="menu" id="list" aria-hidden="true">
-              <li class="menu-item">
-                <a href="index.html" class="menu-link">Главная страница</a>
-              </li>
-              <li class="menu-item">
-                <a href="relevance.html" class="menu-link" >Восстребованность</a>
-              </li>
-              <li class="menu-item">
-                <a href="geography.html" class="menu-link" >География</a>
-              </li>
-              <li class="menu-item">
-                <a href="skills.html" class="menu-link" >Навыки</a>
-              </li>
-              <li class="menu-item">
-                <a href="latest-vac.html" class="menu-link" >Последние вакансии</a>
-              </li>
-            </ul>
+            <div class="sidebar" id="sidebar">
+              <button class="button" aria-expanded="false" aria-controls="list" onclick="toggleSidebar()">
+                <img src="image/menu.png" alt="Меню" width="50" height="30" class="rotate-icon">
+              </button>
+                <ul class="menu" id="list" aria-hidden="true">
+                    <li class="menu-item">
+                        <a href="index.html" class="menu-link" data-href="index.html">Главная страница</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="relevance.html" class="menu-link" data-href="relevance.html">Восстребованность</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="geography.html" class="menu-link" data-href="geography.html">География</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="skills.html" class="menu-link" data-href="skills.html">Навыки</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="latest-vac.html" class="menu-link" data-href="latest-vac.html">Последние вакансии</a>
+                    </li>
+                </ul>
+            </div>
+            <main>
+              
+            </main>
         </div>
-        <main>
-
-        </main>
     </body>
     <footer>
 
