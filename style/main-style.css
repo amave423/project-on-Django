@@ -41,6 +41,7 @@ body, html {
     padding: 10px;
     display: flex;
     align-items: center;
+    margin-top: 10px;
 }
 
 .menu {
@@ -109,9 +110,10 @@ body, html {
     transform: rotate(180deg); 
 }
 
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 980px) {
     .sidebar {
         overflow-x: hidden;
+        width: 8%;
     }
 
     .menu-item {
@@ -128,12 +130,16 @@ body, html {
         height: 30px;
     }
 
+    .sidebar-expanded {
+        width: 35%;
+    }
 }
 
 .main-title {
     font-size: 60px;
     white-space: nowrap;
     max-width: 20%;
+    white-space: pre-line;
 }
 
 .main-content {
